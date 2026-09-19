@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MediSense | Making Sense of Your Symptoms
+    </title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="health.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ♡
+            </div>
+
+            <div class="logo-name">
+                Medi<span>Sense</span>
+            </div>
+
+        </div>
+
+
+        <button
+            class="about-btn"
+            onclick="openAbout()"
+        >
+            About
+        </button>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+
+        <div class="hero-content">
+
+
+            <div class="ai-badge">
+
+                <span class="dot"></span>
+
+                AI HEALTH ASSISTANT
+
+            </div>
+
+
+            <h1>
+
+                Making sense of
+                <span>your symptoms.</span>
+
+            </h1>
+
+
+            <div class="slogan">
+
+                Understand Your Health Better !
+
+            </div>
+
+
+            <p class="description">
+
+                Describe what you're feeling and
+                MediSense will provide simple,
+                AI-powered health information to
+                help you understand your symptoms.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- Doctor -->
+
+        <div class="doctor-area">
+
+            <img
+                src="femaledoc.jpeg"
+                alt="Female doctor illustration"
+            >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= SYMPTOM SECTION ================= -->
+
+    <section class="section">
+
+
+        <div class="section-heading">
+
+            <h2>
+                What are you feeling?
+            </h2>
+
+            <p>
+                Tell MediSense about your symptoms.
+            </p>
+
+        </div>
+
+
+
+        <!-- Symptom Card -->
+
+        <div class="symptom-card">
+
+
+            <div class="textarea-container">
+
+                <textarea
+                    id="symptoms"
+                    placeholder="Example: I've had a headache and mild fever since yesterday..."
+                ></textarea>
+
+
+                <span class="input-hint">
+
+                    Be as specific as you can
+
+                </span>
+
+            </div>
+
+
+
+            <div class="card-bottom">
+
+
+                <div class="hint">
+
+                    💡 Mention when it started
+                    and how severe it feels.
+
+                </div>
+
+
+
+                <button
+                    class="analyze-btn"
+                    onclick="analyzeSymptoms()"
+                >
+
+                    Analyze Symptoms →
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- Quick Symptoms -->
+
+            <div class="quick-title">
+
+                Quick symptoms
+
+            </div>
+
+
+            <div class="quick-buttons">
+
+
+                <button
+                    class="quick-btn"
+                    onclick="addSymptom('Headache')"
+                >
+                    Headache
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    onclick="addSymptom('Fever')"
+                >
+                    Fever
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    onclick="addSymptom('Cough')"
+                >
+                    Cough
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    onclick="addSymptom('Sore throat')"
+                >
+                    Sore throat
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    onclick="addSymptom('Stomach pain')"
+                >
+                    Stomach pain
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    onclick="addSymptom('Tiredness')"
+                >
+                    Tiredness
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Disclaimer -->
+
+        <div class="warning">
+
+            ⚠️
+
+            <strong>Important:</strong>
+
+            MediSense provides general health
+            information and is not a medical diagnosis
+            or a replacement for a qualified healthcare
+            professional.
+
+            If you have severe or emergency symptoms,
+            seek medical care immediately.
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 MediSense ·
+        Making Sense of Your Symptoms
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- ================= ABOUT MODAL ================= -->
+
+<div
+    class="about-modal"
+    id="aboutModal"
+>
+
+
+    <div class="about-box">
+
+
+        <button
+            class="close-btn"
+            onclick="closeAbout()"
+        >
+
+            ×
+
+        </button>
+
+
+        <div class="about-icon">
+
+            ♡
+
+        </div>
+
+
+        <h2>
+
+            About MediSense
+
+        </h2>
+
+
+        <p class="about-tagline">
+
+            Making Sense of Your Symptoms.
+
+        </p>
+
+
+        <p>
+
+           MediSense uses AI to assess the symptoms you provide 
+           and offer information about possible health conditions, 
+           helpful self-care guidance, and warning signs that may
+            require medical attention.
+
+        </p>
+
+
+        <p>
+
+            This information is intended to help
+            you better understand your symptoms
+            and take better care of your health.
+
+            For appropriate medical treatment,
+            please consult a qualified healthcare
+            professional.
+
+        </p>
+
+
+        <div class="about-note">
+
+            ⚕️ MediSense is not a replacement
+            for a qualified healthcare professional.
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= RESULT SECTION ================= -->
+
+<section class="result-section" id="resultSection">
+
+    <div class="result-card">
+
+        <div class="result-header">
+
+            <div>
+                <span class="result-badge">
+                    ✦ AI HEALTH ASSESSMENT
+                </span>
+
+                <h2>
+                    Here's what we found
+                </h2>
+
+                <p>
+                    Based on the symptoms you provided.
+                </p>
+            </div>
+
+            <div class="result-icon">
+                ♡
+            </div>
+
+        </div>
+
+
+        <!-- Possible Conditions -->
+
+        <div class="result-block">
+
+            <h3>
+                🩺 Possible conditions
+            </h3>
+
+            <div class="condition-list">
+
+                <div class="condition">
+                    <span>Common cold</span>
+                    <small>Possible</small>
+                </div>
+
+                <div class="condition">
+                    <span>Viral infection</span>
+                    <small>Possible</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- What You Can Do -->
+
+        <div class="result-block">
+
+            <h3>
+                💡 What you can do
+            </h3>
+
+            <ul>
+
+                <li>Get enough rest.</li>
+
+                <li>Drink plenty of fluids.</li>
+
+                <li>Monitor how your symptoms change.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Medical Help -->
+
+        <div class="medical-help">
+
+            <h3>
+                ⚠️ When to seek medical help
+            </h3>
+
+            <p>
+                If your symptoms become severe,
+                continue for a long time, or you
+                are concerned about your health,
+                consult a qualified healthcare
+                professional.
+            </p>
+
+        </div>
+
+
+        <div class="result-disclaimer">
+
+            This AI-generated assessment is for
+            informational purposes only and is not
+            a substitute for professional medical advice.
+
+        </div>
+
+
+        <button
+            class="again-btn"
+            onclick="analyzeAgain()"
+        >
+            ← Analyze another symptom
+        </button>
+
+
+    </div>
+
+</section>
+
+<script src="health.js"></script>
+
+
+</body>
+
+</html>
