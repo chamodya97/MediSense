@@ -26,6 +26,12 @@ app.post("/analyze", async (req, res) => {
         }
 
         const prompt = `
+        Language instructions:
+- Understand symptoms written in English, Sinhala, or Singlish.
+- Users may mix Sinhala and English in the same sentence.
+- Do not require the user to write symptoms in English.
+- Understand common Sri Lankan Sinhala/Singlish expressions related to health.
+- Always return the assessment in clear, simple English.
 You are MediSense, an AI health information assistant.
 
 Analyze the user's symptoms carefully.
